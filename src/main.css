@@ -22,6 +22,14 @@ html {
   }
 }
 
+:root {
+  --bg-main-color: #4188ff;
+  --bg-main-color-ligth: #accbff;
+
+  --text-main-color: #4188ff;
+  --text-main-color-ligth: #accbff;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 20px;
