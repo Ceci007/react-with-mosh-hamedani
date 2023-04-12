@@ -25,9 +25,21 @@ html {
 :root {
   --bg-main-color: #4188ff;
   --bg-main-color-ligth: #accbff;
+  --bg-danger-color: #ed3419;
+  --bg-danger-ligth: #ff8164;
+  --bg-success-color: #57cb4d;
+  --bg-success-ligth: #abe098;
+  --bg-warning-color: #fec901;
+  --bg-warning-ligth: #fee480;
 
   --text-main-color: #4188ff;
   --text-main-color-ligth: #accbff;
+  --text-danger-color: #ed3419;
+  --text-danger-ligth: #ff8164;
+  --text-success-color: #57cb4d;
+  --text-success-ligth: #abe098;
+  --text-warning-color: #fec901;
+  --text-warning-ligth: #fee480;
 }
 
 body {
