@@ -1,11 +1,11 @@
-import ListGroup from "./components/ListGroup/ListGroup";
+import Alert from "./components/Alert/Alert";
 
 function App() {
-  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-
   return (
     <div>
-      <ListGroup items={items} heading="Cities" />
+      <Alert>
+        Hello <span>world</span> how are you?
+      </Alert>
     </div>
   );
 }
