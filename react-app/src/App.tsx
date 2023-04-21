@@ -1,14 +1,10 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar";
-import Cart from "./components/Cart";
+import ExpandableText from "./components/ExpandableText";
 
 function App() {
-  const [cartItems, setCartItems] = useState(["product-1", "product-2"]);
-
   return (
     <div>
-      <Navbar cartItemsCount={cartItems.length} />
-      <Cart cartItems={cartItems} onClear={() => setCartItems([])} />
+      <ExpandableText>Hello world</ExpandableText>
     </div>
   );
 }
