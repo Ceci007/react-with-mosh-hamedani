@@ -1,24 +1,42 @@
-import { FormEvent } from "react";
+import { FormEvent, useRef } from "react";
 import style from "./Form.module.css";
 
 const Form = () => {
+  const nameRef = useRef<HTMLInputElement>(null);
+  const ageRef = useRef<HTMLInputElement>(null);
+  const person = { name: "", age: 0 };
+
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    console.log("Submitted");
+    if (nameRef.current !== null) person.name = nameRef.current.value;
+    if (ageRef.current !== null) person.age = parseInt(ageRef.current.value);
+
+    console.log(person);
   };
+
   return (
     <form className={style["form"]} onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name" className={style["form-label"]}>
           Name
         </label>
-        <input type="text" className={style["form-control"]} id="name" />
+        <input
+          ref={nameRef}
+          type="text"
+          className={style["form-control"]}
+          id="name"
+        />
       </div>
       <div>
         <label htmlFor="age" className={style["form-label"]}>
           Age
         </label>
-        <input type="number" className={style["form-control"]} id="age" />
+        <input
+          ref={ageRef}
+          type="number"
+          className={style["form-control"]}
+          id="age"
+        />
       </div>
       <button
         type="submit"
